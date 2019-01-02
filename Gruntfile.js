@@ -7,15 +7,26 @@
 //default runs with just $grunt
 
 module.exports = function(grunt) {
-  grunt.registerTask('speak', function() {
-    console.log("I'm speaking");
+  // grunt.registerTask('speak', function() {
+  //   console.log("I'm speaking");
+  // });
+
+  // grunt.registerTask('yell', function() {
+  //   console.log("I'm yelling");
+  // });
+
+  // grunt.registerTask('both', ['speak', 'yell']);
+
+  // grunt.registerTask('default', ['speak', 'yell']);
+
+  grunt.initConfig({
+    concat: {
+      dist: {
+        src: ['js/1.js', 'js/2.js'],
+        dest: 'build/script.js'
+      }
+    }
   });
 
-  grunt.registerTask('yell', function() {
-    console.log("I'm yelling");
-  });
-
-  grunt.registerTask('both', ['speak', 'yell']);
-
-  grunt.registerTask('default', ['speak', 'yell']);
+  grunt.loadNpmTasks('grunt-contrib-concat');
 };

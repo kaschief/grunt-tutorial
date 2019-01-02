@@ -18,5 +18,8 @@
   "homepage": "https://github.com/kaschief/grunt-tutorial#readme",
   "dependencies": {
     "grunt": "^1.0.3"
+  },
+  "devDependencies": {
+    "grunt-contrib-concat": "^1.0.1"
   }
 }
